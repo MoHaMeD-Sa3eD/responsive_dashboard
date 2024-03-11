@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/UserInfoListTile/UserInfoListTileModel.dart';
+
+import '../utils/app_styles.dart';
+
+class UserInfoListTile extends StatelessWidget {
+  const UserInfoListTile({
+    super.key,
+    required this.userInfoListTileModel,
+  });
+
+  final UserInfoListTileModel userInfoListTileModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: SvgPicture.asset(userInfoListTileModel.icon),
+      title: Text(
+        userInfoListTileModel.titleText,
+        style: AppStyles.styleSemiBold16,
+      ),
+      subtitle: Text(
+        userInfoListTileModel.subTitleText,
+        style: AppStyles.styleRegular12,
+      ),
+    );
+  }
+}
