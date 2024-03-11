@@ -5,12 +5,12 @@ import 'package:responsive_dashboard_flutter/ui_part/customWidgets/UserInfoListT
 import '../utils/app_styles.dart';
 
 class UserInfoListTile extends StatelessWidget {
+  final UserInfoListTileModel userInfoListTileModel;
+
   const UserInfoListTile({
     super.key,
     required this.userInfoListTileModel,
   });
-
-  final UserInfoListTileModel userInfoListTileModel;
 
   @override
   Widget build(BuildContext context) {
