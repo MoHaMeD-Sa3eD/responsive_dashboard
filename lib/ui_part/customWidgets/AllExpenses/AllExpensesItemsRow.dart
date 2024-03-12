@@ -39,11 +39,18 @@ class AllExpensesItemsTogether extends StatelessWidget {
             return Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: AllExpensesItem(allExpensesItemModel: value),
+                child: AllExpensesItem(
+                  allExpensesItemModel: value,
+                  isActive: false,
+                ),
               ),
             );
           } else {
-            return Expanded(child: AllExpensesItem(allExpensesItemModel: value));
+            return Expanded(
+                child: AllExpensesItem(
+              allExpensesItemModel: value,
+              isActive: false,
+            ));
           }
         }).toList(),
       ],

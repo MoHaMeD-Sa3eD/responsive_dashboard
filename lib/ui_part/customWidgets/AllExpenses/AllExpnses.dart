@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard_flutter/ui_part/customWidgets/AllExpenses/AllExpensesItemsTogether.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/AllExpenses/AllExpensesItemsRow.dart';
 import 'AllExpensesHeader/     AllExpensesHeader.dart';
 
 class AllExpensesWidget extends StatelessWidget {
