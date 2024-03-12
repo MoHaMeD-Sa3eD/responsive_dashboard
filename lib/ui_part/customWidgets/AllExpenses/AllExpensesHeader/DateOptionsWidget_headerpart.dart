@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../utils/app_styles.dart';
 
 class DateOptions extends StatelessWidget {
@@ -35,3 +34,4 @@ class DateOptions extends StatelessWidget {
     );
   }
 }
+

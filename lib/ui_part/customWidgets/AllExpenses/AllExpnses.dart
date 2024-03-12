@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard_flutter/ui_part/customWidgets/AllExpenses/AllExpensesItem/AllExpensesItemModel.dart';
-import 'package:responsive_dashboard_flutter/ui_part/utils/app_images.dart';
-
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/AllExpenses/AllExpensesItemsTogether.dart';
 import 'AllExpensesHeader/     AllExpensesHeader.dart';
-import 'AllExpensesItem/AllExpensesItem.dart';
 
 class AllExpensesWidget extends StatelessWidget {
   const AllExpensesWidget({super.key});
@@ -18,20 +15,10 @@ class AllExpensesWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: Column(
+      child: const Column(
         children: [
-          const AllExpensesHeader(),
-          Padding(
-            padding: const EdgeInsets.only(top: 16.0),
-            child: AllExpensesItem(
-              allExpensesItemModel: AllExpensesItemModel(
-                iconImageName: AppImages.assetsImagesIncome,
-                itemTitle: 'Income',
-                date: 'April 2022',
-                price: '\$20,129',
-              ),
-            ),
-          ),
+          AllExpensesHeader(),
+          AllExpensesItemsTogether(),
         ],
       ),
     );
