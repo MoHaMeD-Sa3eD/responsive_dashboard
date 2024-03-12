@@ -8,8 +8,8 @@ class DashBoardScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveLayoutBuilder(
-      mobileLayout : (context) => const Placeholder(),
-      tabletLayout: (context) => const Placeholder(),
+      mobileLayout : (context) => const Text('Mobile Layout'),
+      tabletLayout: (context) => const Text('Tablet Layout'),
       desktopLayout: (context) => const DashBoardDesktopLayout(),
     );
   }
