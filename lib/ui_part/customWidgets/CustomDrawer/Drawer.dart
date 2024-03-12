@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/DrawerListTile/DrawerItemModel.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/DrawerListTile/InActiveDrawerItem.dart';
 import 'package:responsive_dashboard_flutter/ui_part/customWidgets/UserInfoListTile/UserInfoListTileModel.dart';
 import 'package:responsive_dashboard_flutter/ui_part/customWidgets/utils/app_images.dart';
-
+import '../DrawerListTile/DrawerItemsListView.dart';
 import '../UserInfoListTile/UserInfoListTile.dart';
 
 class DashBoardDrawer extends StatelessWidget {
@@ -16,10 +18,10 @@ class DashBoardDrawer extends StatelessWidget {
         color: Colors.white,
       ),
       child: Column(
-        children: [
+        children: <Widget>[
           Card(
             color: const Color(0xFFFAFAFA),
-            elevation: 0,
+            elevation: 0.2,
             child: UserInfoListTile(
               userInfoListTileModel: UserInfoListTileModel(
                   titleText: 'Lekan Okeowo',
@@ -27,6 +29,23 @@ class DashBoardDrawer extends StatelessWidget {
                   icon: AppImages.assetsImageAvatar3),
             ),
           ),
+          const SizedBox(
+            height: 8,
+          ),
+          const DrawerItemsListView(),
+          const Spacer(),
+          const InActiveDrawerItem(
+            drawerItemModel: DrawerItemModel(
+                icon: AppImages.assetsImagesSettings,
+                text: '   Setting system '),
+          ),
+          const InActiveDrawerItem(
+            drawerItemModel: DrawerItemModel(
+                icon: AppImages.assetsImagesLogout, text: '   Logout Account '),
+          ),
+          const SizedBox(
+            height: 48,
+          )
         ],
       ),
     );
