@@ -4,7 +4,6 @@ import 'package:responsive_dashboard_flutter/ui_part/customWidgets/UserInfoListT
 
 import '../../utils/app_styles.dart';
 
-
 class UserInfoListTile extends StatelessWidget {
   final UserInfoListTileModel userInfoListTileModel;
 
@@ -24,6 +23,7 @@ class UserInfoListTile extends StatelessWidget {
       subtitle: Text(
         userInfoListTileModel.subTitleText,
         style: AppStyles.styleRegular12,
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }

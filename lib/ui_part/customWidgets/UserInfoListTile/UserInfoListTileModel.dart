@@ -4,7 +4,7 @@ class UserInfoListTileModel {
 
   final String icon;
 
-  UserInfoListTileModel(
+  const UserInfoListTileModel(
       {required this.titleText,
       required this.subTitleText,
       required this.icon});
