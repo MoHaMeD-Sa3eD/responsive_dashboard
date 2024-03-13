@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard_flutter/ui_part/customWidgets/AllExpenses/AllExpensesItemsRow.dart';
+import '../CustomBackGroundContainer.dart';
 import 'AllExpensesHeader/     AllExpensesHeader.dart';
 
 class AllExpensesWidget extends StatelessWidget {
@@ -7,15 +8,8 @@ class AllExpensesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
-      child: const Column(
+    return const CustomBackGroundContainer(
+      child: Column(
         children: [
           AllExpensesHeader(),
           AllExpensesItemsTogether(),
