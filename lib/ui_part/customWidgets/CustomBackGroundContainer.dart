@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 class CustomBackGroundContainer extends StatelessWidget {
   final Widget child;
 
+  final double? paddingValue;
+
   const CustomBackGroundContainer({
     super.key,
     required this.child,
+    this.paddingValue,
   });
 
   @override
@@ -15,7 +18,7 @@ class CustomBackGroundContainer extends StatelessWidget {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(paddingValue ?? 20),
         ),
       ),
       child: child,
