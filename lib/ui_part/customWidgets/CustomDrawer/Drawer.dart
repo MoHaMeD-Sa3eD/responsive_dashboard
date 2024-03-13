@@ -17,29 +17,25 @@ class DashBoardDrawer extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
       ),
-      child: CustomScrollView(
+      child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: Card(
-              color: const Color(0xFFFAFAFA),
-              elevation: 0.2,
-              child: UserInfoListTile(
-                userInfoListTileModel: UserInfoListTileModel(
-                    titleText: 'Lekan Okeowo',
-                    subTitleText: 'demo@gmail.com',
-                    icon: AppImages.assetsImageAvatar3),
-              ),
+            child: UserInfoListTile(
+              userInfoListTileModel: UserInfoListTileModel(
+                  titleText: 'Lekan Okeowo',
+                  subTitleText: 'demo@gmail.com',
+                  icon: AppImages.assetsImageAvatar3),
             ),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: SizedBox(
               height: 8,
             ),
           ),
-          const DrawerItemsListView(),
+          DrawerItemsListView(),
           //  const SliverToBoxAdapter(child: Spacer()),
 
-          const SliverFillRemaining(
+          SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
