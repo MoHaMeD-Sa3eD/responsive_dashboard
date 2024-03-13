@@ -3,8 +3,16 @@ import 'package:responsive_dashboard_flutter/ui_part/customWidgets/AllExpenses/A
 import 'package:responsive_dashboard_flutter/ui_part/utils/app_images.dart';
 import 'AllExpensesItem/AllExpensesItemModel.dart';
 
-class AllExpensesItemsTogether extends StatelessWidget {
-  static const List<AllExpensesItemModel> allExpensesItemList = [
+class AllExpensesItemsTogether extends StatefulWidget {
+  const AllExpensesItemsTogether({super.key});
+
+  @override
+  State<AllExpensesItemsTogether> createState() =>
+      _AllExpensesItemsTogetherState();
+}
+
+class _AllExpensesItemsTogetherState extends State<AllExpensesItemsTogether> {
+  final List<AllExpensesItemModel> allExpensesItemList = const [
     AllExpensesItemModel(
       iconImageName: AppImages.assetsImagesBalance,
       itemTitle: 'Balance',
@@ -25,7 +33,7 @@ class AllExpensesItemsTogether extends StatelessWidget {
     ),
   ];
 
-  const AllExpensesItemsTogether({super.key});
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -37,20 +45,38 @@ class AllExpensesItemsTogether extends StatelessWidget {
 
           if (index == 1) {
             return Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: AllExpensesItem(
-                  allExpensesItemModel: value,
-                  isActive: false,
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: AllExpensesItem(
+                    allExpensesItemModel: value,
+                    isItemSelected: selectedIndex == index,
+                  ),
                 ),
               ),
             );
           } else {
             return Expanded(
-                child: AllExpensesItem(
-              allExpensesItemModel: value,
-              isActive: false,
-            ));
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: AllExpensesItem(
+                    allExpensesItemModel: value,
+                    isItemSelected: selectedIndex == index,
+                  ),
+                ),
+              ),
+            );
           }
         }).toList(),
       ],
