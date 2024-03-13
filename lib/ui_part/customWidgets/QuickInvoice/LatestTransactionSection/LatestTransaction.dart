@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard_flutter/ui_part/customWidgets/QuickInvoice/LatestTransactionSection/LatestTransactionListView.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/QuickInvoice/LatestTransactionSection/LatestTransactionRow.dart';
 
 import '../../../utils/app_styles.dart';
 
