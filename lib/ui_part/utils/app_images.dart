@@ -7,7 +7,7 @@ abstract class AppImages {
   static const String assetsImagesBalance = 'assets/images/balance.svg';
 
   static const String assetsImagesCardBackground =
-      'assets/images/card_background.svg';
+      'assets/images/card_background.png';
 
   static const String assetsImagesDashboard = 'assets/images/dashboard.svg';
   static const String assetsImagesExpenses = 'assets/images/expenses.svg';
