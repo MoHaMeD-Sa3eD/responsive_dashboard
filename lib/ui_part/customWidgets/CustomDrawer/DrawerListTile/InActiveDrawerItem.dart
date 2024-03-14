@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../utils/app_styles.dart';
+import '../../../utils/app_styles.dart';
 import 'DrawerItemModel.dart';
 
-class ActiveDrawerItem extends StatelessWidget {
-  const ActiveDrawerItem({
+
+
+class InActiveDrawerItem extends StatelessWidget {
+  const InActiveDrawerItem({
     super.key,
     required this.drawerItemModel,
   });
@@ -17,14 +19,8 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.icon),
       title: Text(
-        drawerItemModel.text,
-        style: AppStyles.styleBold16,
-      ),
-      trailing: Container(
-        width: 3.27,
-        decoration: const BoxDecoration(
-          color: Color(0xFF4EB7F2),
-        ),
+       drawerItemModel.text,
+        style: AppStyles.styleMedium16,
       ),
     );
   }

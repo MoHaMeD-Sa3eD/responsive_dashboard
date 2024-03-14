@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/CustomDrawer/DrawerListTile/DrawerItem.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/CustomDrawer/DrawerListTile/DrawerItemModel.dart';
 
-import '../../utils/app_images.dart';
-import 'DrawerItem.dart';
-import 'DrawerItemModel.dart';
-
+import '../../../utils/app_images.dart';
 class DrawerItemsListView extends StatefulWidget {
   const DrawerItemsListView({
     super.key,
@@ -34,7 +33,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
     return SliverList.builder(
       itemCount: items.length,
       //physics: const NeverScrollableScrollPhysics(),
-     // shrinkWrap: true,
+      // shrinkWrap: true,
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
@@ -43,7 +42,6 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
                 currentIndex = index;
               });
             }
-            debugPrint('$currentIndex');
           },
           child: Padding(
             padding: const EdgeInsets.only(top: 20),

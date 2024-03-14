@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard_flutter/ui_part/customWidgets/DrawerListTile/DrawerItemModel.dart';
-import 'package:responsive_dashboard_flutter/ui_part/customWidgets/DrawerListTile/InActiveDrawerItem.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/CustomDrawer/DrawerListTile/DrawerItemModel.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/CustomDrawer/DrawerListTile/DrawerItemsListView.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/CustomDrawer/DrawerListTile/InActiveDrawerItem.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/UserInfoListTile/UserInfoListTile.dart';
 import 'package:responsive_dashboard_flutter/ui_part/customWidgets/UserInfoListTile/UserInfoListTileModel.dart';
-import '../../utils/app_images.dart';
-import '../DrawerListTile/DrawerItemsListView.dart';
-import '../UserInfoListTile/UserInfoListTile.dart';
+import 'package:responsive_dashboard_flutter/ui_part/utils/app_images.dart';
+
+
+
 
 class DashBoardDrawer extends StatelessWidget {
   const DashBoardDrawer({

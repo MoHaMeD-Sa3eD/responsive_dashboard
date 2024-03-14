@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'ActiveDrawerItem.dart';
 import 'DrawerItemModel.dart';
 import 'InActiveDrawerItem.dart';
-
 class DrawerItem extends StatelessWidget {
   final DrawerItemModel drawerItemModel;
   final bool isActive;
