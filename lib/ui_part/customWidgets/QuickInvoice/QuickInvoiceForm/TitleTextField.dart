@@ -18,11 +18,8 @@ class TitleTextField extends StatelessWidget {
           titleTextFieldModel.titleText,
           style: AppStyles.styleMedium16,
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: CustomTextField(
-            hintText: titleTextFieldModel.hintText,
-          ),
+        CustomTextField(
+          hintText: titleTextFieldModel.hintText,
         ),
       ],
     );
