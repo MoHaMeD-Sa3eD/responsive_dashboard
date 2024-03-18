@@ -49,7 +49,7 @@ class QuickInvoiceForm extends StatelessWidget {
             Expanded(
               child: TitleTextField(
                 titleTextFieldModel: TitleTextFieldModel(
-                    hintText: 'USD', titleText: 'Item mount'),
+                    hintText: '▼ USD', titleText: 'Item mount'),
               ),
             ),
           ],

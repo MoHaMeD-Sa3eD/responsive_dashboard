@@ -17,8 +17,11 @@ class DashBoardDesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 3,
+          flex: 2,
           child: AllExpensesAndQuickInvoiceSection(),
+        ),
+        SizedBox(
+          width: 24,
         ),
         Expanded(child: MyCard()),
       ],
