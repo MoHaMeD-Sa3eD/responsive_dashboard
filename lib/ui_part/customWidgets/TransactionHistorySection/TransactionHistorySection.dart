@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard_flutter/ui_part/utils/app_styles.dart';
 
+import 'TransactionHistoryHeader/TransactionHistoryHeader.dart';
+
 class TransactionHistorySection extends StatelessWidget {
   const TransactionHistorySection({super.key});
 
@@ -8,20 +10,12 @@ class TransactionHistorySection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Transaction History',
-              style: AppStyles.styleSemiBold20,
-            ),
-            Text(
-              'See all',
-              style: AppStyles.styleMedium16,
-            ),
-          ],
-        ),
+        TransactionHistoryHeader(),
+        Text('13 April 2022',style: AppStyles.styleMedium16,),
+        ListTile()
       ],
     );
   }
 }
+
+
