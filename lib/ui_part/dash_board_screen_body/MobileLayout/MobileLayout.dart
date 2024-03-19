@@ -10,12 +10,14 @@ class MobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        AllExpensesAndQuickInvoiceSection(),
-        SizedBox(height: 24),
-        PersonalInformationSection(),
-      ],
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          AllExpensesAndQuickInvoiceSection(),
+          SizedBox(height: 24),
+          PersonalInformationSection(),
+        ],
+      ),
     );
   }
 }

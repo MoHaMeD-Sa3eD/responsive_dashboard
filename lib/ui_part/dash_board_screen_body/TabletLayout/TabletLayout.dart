@@ -16,9 +16,7 @@ class TabletLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: SingleChildScrollView(
-            child: MobileLayout(),
-          ),
+          child: MobileLayout(),
         ),
         SizedBox(
           width: 32,
@@ -27,5 +25,3 @@ class TabletLayout extends StatelessWidget {
     );
   }
 }
-
-
