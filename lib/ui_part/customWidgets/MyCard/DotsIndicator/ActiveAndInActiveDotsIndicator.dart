@@ -14,7 +14,9 @@ class MyCardDotsIndicator extends StatelessWidget {
 }
 
 class InActiveMyCardDotsIndicator extends StatelessWidget {
-  const InActiveMyCardDotsIndicator({super.key});
+  const InActiveMyCardDotsIndicator({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +24,11 @@ class InActiveMyCardDotsIndicator extends StatelessWidget {
       height: 8,
       width: 8,
       decoration: ShapeDecoration(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          color: const Color(0xFFE7E7E7)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        color: const Color(0xFFE7E7E7),
+      ),
       duration: const Duration(milliseconds: 500),
     );
   }
