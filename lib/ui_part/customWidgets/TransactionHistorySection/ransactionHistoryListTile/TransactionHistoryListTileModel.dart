@@ -2,7 +2,7 @@ class TransactionHistoryListTileModel {
   final String title, date, amount;
   final bool isWithdrawal;
 
-  TransactionHistoryListTileModel({
+  const TransactionHistoryListTileModel({
     required this.title,
     required this.date,
     required this.amount,

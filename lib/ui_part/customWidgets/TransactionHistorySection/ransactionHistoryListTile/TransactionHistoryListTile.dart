@@ -22,7 +22,7 @@ class TransactionHistoryListTile extends StatelessWidget {
         ),
         subtitle: Text(
           transactionHistoryListTileModel.date,
-          style: AppStyles.styleRegular16,
+          style: AppStyles.styleRegular16.copyWith(color: const Color(0xFAAAAAAA)),
         ),
         trailing: Text(
           transactionHistoryListTileModel.amount,

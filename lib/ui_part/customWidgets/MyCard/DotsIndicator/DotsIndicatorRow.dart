@@ -12,8 +12,11 @@ class DotsIndicatorRow extends StatelessWidget {
       children: [
         ...List.generate(
           5,
-          (index) => MyCardDotsIndicator(
-              isActive: index == currentIndex ? true : false),
+          (index) => Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: MyCardDotsIndicator(
+                isActive: index == currentIndex ? true : false),
+          ),
         ),
       ],
     );

@@ -13,8 +13,9 @@ class DateOptions extends StatelessWidget {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-            side: const BorderSide(width: 1, color: Color(0xFFF1F1F1))),
+          borderRadius: BorderRadius.circular(12),
+          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
+        ),
       ),
       child: const Row(
         children: [
@@ -34,4 +35,3 @@ class DateOptions extends StatelessWidget {
     );
   }
 }
-

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/TransactionHistorySection/TransactionHistoryList.dart';
 import 'package:responsive_dashboard_flutter/ui_part/utils/app_styles.dart';
 
 import 'TransactionHistoryHeader/TransactionHistoryHeader.dart';
@@ -12,14 +13,18 @@ class TransactionHistorySection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TransactionHistoryHeader(),
-        SizedBox(height: 20,),
-        Text('13 April 2022',style: AppStyles.styleMedium16,),
-
-
+        SizedBox(
+          height: 20,
+        ),
+        Text(
+          '13 April 2022',
+          style: AppStyles.styleMedium16,
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        TransactionHistoryList(),
       ],
     );
   }
 }
-
-
-
