@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../customWidgets/AllExpenses/AllExpnses.dart';
-import '../../customWidgets/QuickInvoice/QuickInvoice.dart';
+import '../AllExpenses/AllExpnses.dart';
+import '../QuickInvoice/QuickInvoice.dart';
 
 class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
   const AllExpensesAndQuickInvoiceSection({

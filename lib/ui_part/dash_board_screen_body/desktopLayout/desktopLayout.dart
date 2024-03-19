@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../customWidgets/CustomDrawer/Drawer.dart';
 import '../../customWidgets/PersonalInformationSectionColumn/PersonalInformationSection.dart';
-import 'AllExpensesAndQuickInvoiceSection.dart';
+import '../../customWidgets/AllExpensesAndQuickInvoiceSection/AllExpensesAndQuickInvoiceSection.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
   const DashBoardDesktopLayout({super.key});
