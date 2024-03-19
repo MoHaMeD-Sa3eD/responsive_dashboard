@@ -19,7 +19,7 @@ class PersonalInformationSection extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        Expanded(child: IncomeSection()),
+        IncomeSection(),
       ],
     );
   }
