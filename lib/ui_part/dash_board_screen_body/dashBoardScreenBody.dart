@@ -13,6 +13,8 @@ class DashBoardScreenBody extends StatelessWidget {
     return AdaptiveLayoutBuilder(
       mobileLayout: (context) => const MobileLayout(),
       tabletLayout: (context) => const TabletLayout(),
+      miniDesktopLayout: (BuildContext context) =>
+          const Text('miniDesktopLayout'),
       desktopLayout: (context) => const DashBoardDesktopLayout(),
     );
   }

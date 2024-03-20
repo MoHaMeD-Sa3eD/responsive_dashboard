@@ -11,17 +11,29 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackGroundContainer(
-        child: Column(
+      child: Column(
+        children: [
+          IncomeSectionHeader(),
+          LargeIncomeSectionBody(),
+        ],
+      ),
+    );
+  }
+}
+
+class LargeIncomeSectionBody extends StatelessWidget {
+  const LargeIncomeSectionBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IncomeSectionHeader(),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(child: IncomeChart()),
-            Expanded(child: IncomeDetailsList()),
-          ],
-        ),
+        Expanded(child: IncomeChart()),
+        Expanded(flex: 2, child: IncomeDetailsList()),
       ],
-    ));
+    );
   }
 }
