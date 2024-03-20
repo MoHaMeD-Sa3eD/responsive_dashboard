@@ -1,14 +1,34 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class IncomeChart extends StatefulWidget {
-  const IncomeChart({super.key});
+import 'IncomeChart.dart';
+import 'IncomeDetails.dart';
+
+class DetailedIncomeSectionBody extends StatelessWidget {
+  const DetailedIncomeSectionBody({
+    super.key,
+  });
 
   @override
-  State<IncomeChart> createState() => _IncomeChartState();
+  Widget build(BuildContext context) {
+    return const Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(child: IncomeChart()),
+        Expanded(flex: 2, child: IncomeDetailsList()),
+      ],
+    );
+  }
 }
 
-class _IncomeChartState extends State<IncomeChart> {
+class MiniIncomeChart extends StatefulWidget {
+  const MiniIncomeChart({super.key});
+
+  @override
+  State<MiniIncomeChart> createState() => _MiniIncomeChartState();
+}
+
+class _MiniIncomeChartState extends State<MiniIncomeChart> {
   int activeIndex = -1;
 
   @override
@@ -61,9 +81,3 @@ class _IncomeChartState extends State<IncomeChart> {
     );
   }
 }
-
-
-
-
-
-
