@@ -3,7 +3,7 @@ import 'package:responsive_dashboard_flutter/ui_part/customWidgets/IncomeSection
 
 import 'ItemDetailsModel.dart';
 
-class IncomeDetailsListView extends StatelessWidget {
+class IncomeDetailsList extends StatelessWidget {
   static const List<ItemDetailsModel> items = [
     ItemDetailsModel(
       title: 'Design service',
@@ -27,15 +27,26 @@ class IncomeDetailsListView extends StatelessWidget {
     ),
   ];
 
-  const IncomeDetailsListView({super.key});
+  const IncomeDetailsList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return Column(
+      children: [
+        ...items.map(
+          (e) {
+            return ItemDetails(itemDetailsModel: e);
+          },
+        ).toList(),
+      ],
+    );
+  }
+}
+/*
+ return ListView.builder(
         shrinkWrap: true,
         itemCount: items.length,
         itemBuilder: (context, index) {
           return ItemDetails(itemDetailsModel: items[index]);
         });
-  }
-}
+ */
