@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:responsive_dashboard_flutter/ui_part/customWidgets/IncomeSection/MiniDetailedIncomeChart.dart';
 import 'DetailedIncomeSectionBody.dart';
-import 'MiniIncomeSectionBody.dart';
 
 class IncomeSectionBody extends StatelessWidget {
   const IncomeSectionBody({
@@ -13,7 +12,13 @@ class IncomeSectionBody extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return width >= 1200 && width < 1750
-        ? const MiniIncomeSectionBody()
+        ? SizedBox(
+            width: width * 0.131,
+            child: const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: MiniDetailedIncomeChart(),
+            ),
+          )
         : const DetailedIncomeSectionBody();
   }
 }

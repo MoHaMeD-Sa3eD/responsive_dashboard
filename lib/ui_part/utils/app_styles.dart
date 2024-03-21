@@ -64,3 +64,24 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
   );
 }
+double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = fontSize * scaleFactor;
+  double minFont = fontSize * 0.8;
+  double maxFont = fontSize * 1.2;
+
+  double responsiveFontSizeRange = responsiveFontSize.clamp(minFont, maxFont);
+
+  return responsiveFontSizeRange;
+}
+
+double getScaleFactor(BuildContext context) {
+  double currentWidth = MediaQuery.of(context).size.width;
+  if (currentWidth < 600) {
+    return currentWidth / 400;
+  } else if (currentWidth < 900) {
+    return currentWidth / 700;
+  } else {
+    return currentWidth / 1000;
+  }
+}
