@@ -12,7 +12,7 @@ class CustomTextButton extends StatelessWidget {
         onPressed: () {},
         child:  Text(
           'Add more details',
-          style: AppStyles.styleBold16,
+          style: AppStyles.styleBold16(context),
         ),
       ),
     );

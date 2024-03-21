@@ -20,7 +20,7 @@ class CustomElevatedButton extends StatelessWidget {
         ),
         child:  Text(
           'Send Money',
-          style: AppStyles.styleSemiBold18,
+          style: AppStyles.styleSemiBold18(context),
         ),
       ),
     );
