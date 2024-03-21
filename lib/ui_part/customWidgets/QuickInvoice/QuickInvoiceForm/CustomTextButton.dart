@@ -10,7 +10,7 @@ class CustomTextButton extends StatelessWidget {
       height: 62,
       child: TextButton(
         onPressed: () {},
-        child: const Text(
+        child:  Text(
           'Add more details',
           style: AppStyles.styleBold16,
         ),

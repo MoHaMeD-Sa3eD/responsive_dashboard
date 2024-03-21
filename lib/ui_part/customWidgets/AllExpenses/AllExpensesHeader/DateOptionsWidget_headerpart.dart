@@ -17,16 +17,16 @@ class DateOptions extends StatelessWidget {
           side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
         ),
       ),
-      child: const Row(
+      child:  Row(
         children: [
           Text(
             'Monthly',
             style: AppStyles.styleMedium16,
           ),
-          SizedBox(
+          const SizedBox(
             width: 18,
           ),
-          Icon(
+          const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xFF064060),
           ),

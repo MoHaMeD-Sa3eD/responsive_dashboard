@@ -18,7 +18,7 @@ class CustomElevatedButton extends StatelessWidget {
           ),
           backgroundColor: const Color(0xFF4DB7F2),
         ),
-        child: const Text(
+        child:  Text(
           'Send Money',
           style: AppStyles.styleSemiBold18,
         ),
