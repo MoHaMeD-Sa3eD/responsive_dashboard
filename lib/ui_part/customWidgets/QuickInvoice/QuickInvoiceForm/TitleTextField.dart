@@ -16,7 +16,7 @@ class TitleTextField extends StatelessWidget {
       children: [
         Text(
           titleTextFieldModel.titleText,
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         CustomTextField(
           hintText: titleTextFieldModel.hintText,

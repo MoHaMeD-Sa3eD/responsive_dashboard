@@ -40,7 +40,7 @@ class _MiniDetailedIncomeChartState extends State<MiniDetailedIncomeChart> {
           title: activeIndex == 0 ? 'Design service' : '40%',
           radius: activeIndex == 0 ? 50 : 60,
           showTitle: true,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 0 ? Colors.black : Colors.white),
           value: 40,
           color: const Color(0xFF208Bc7),
@@ -50,7 +50,7 @@ class _MiniDetailedIncomeChartState extends State<MiniDetailedIncomeChart> {
           title: activeIndex == 1 ? 'Design product' : '25%',
           radius: activeIndex == 1 ? 50 : 60,
           showTitle: true,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 1 ? Colors.black : Colors.white),
           value: 25,
           color: const Color(0xFF4DB7F2),
@@ -60,7 +60,7 @@ class _MiniDetailedIncomeChartState extends State<MiniDetailedIncomeChart> {
           title: activeIndex == 2 ? 'Product royalti' : '20%',
           radius: activeIndex == 2 ? 50 : 60,
           showTitle: true,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 2 ? Colors.black : Colors.white),
           value: 20,
           color: const Color(0xFF064060),
@@ -70,7 +70,7 @@ class _MiniDetailedIncomeChartState extends State<MiniDetailedIncomeChart> {
           title: activeIndex == 3 ? 'other' : '22%',
           radius: activeIndex == 3 ? 50 : 60,
           showTitle: true,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 3 ? Colors.black : Colors.white),
           value: 22,
           color: const Color(0xFFE2DECD),
