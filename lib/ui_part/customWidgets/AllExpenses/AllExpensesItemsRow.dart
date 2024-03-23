@@ -39,47 +39,68 @@ class _AllExpensesItemsTogetherState extends State<AllExpensesItemsTogether> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ...allExpensesItemList.asMap().entries.map((e) {
-          int index = e.key;
-          var value = e.value;
-
-          if (index == 1) {
-            return Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: AllExpensesItem(
-                    allExpensesItemModel: value,
-                    isItemSelected: selectedIndex == index,
-                  ),
-                ),
-              ),
-            );
-          } else {
-            return Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: AllExpensesItem(
-                    allExpensesItemModel: value,
-                    isItemSelected: selectedIndex == index,
-                  ),
-                ),
-              ),
-            );
-          }
-        }).toList(),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 0;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItemList[0],
+              isItemSelected: selectedIndex == 0,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8,),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItemList[1],
+              isItemSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8,),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItemList[2],
+              isItemSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
       ],
     );
   }
 }
+/*
+   ...allExpensesItemList.asMap().entries.map((e) {
+          int index = e.key;
+          var value = e.value;
+
+          return Expanded(
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+              child: AllExpensesItem(
+                allExpensesItemModel: value,
+                isItemSelected: selectedIndex == index,
+              ),
+            ),
+          );
+        }).toList(),
+ */
